@@ -1,19 +1,19 @@
 class Magazine
   attr_writer :name, :category
   @@all = []
-  # #initializes a new Magazine instance
+  #initializes a new Magazine instance
   def initialize(name, category)
     @name = name
     @category = category
     @@all << self
   end
 
-  # #name: Returns the name of this magazine instance
+  #name: Returns the name of this magazine instance
   def name
     @name
   end
 
-  # #category: Returns the category of this magazine instance
+  #category: Returns the category of this magazine instance
   def category
     @category
   end
