@@ -11,6 +11,5 @@ class Author
   end
 end
 
-
 # sam = Author.new("Sammy Cherono")
 # puts sam.name

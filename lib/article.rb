@@ -18,6 +18,9 @@ class Article
   def self.all
     @@all
   end
+
+  def author
+  end
 end
 
 # mwalimu_tom = Article.new("x", "y", "Tom")
