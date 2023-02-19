@@ -33,6 +33,23 @@ class Author
 
     featured_magazine.uniq
   end
+
+
+
+  def add_article(magazine, title)
+    Article.new(self, magazine, title)
+  end
+
+  def topic_areas
+    categories_featured = []
+    (self.magazines).each do |magazine_contributed|
+      categories_featured << magazine_contributed.category
+    end
+      categories_featured.uniq
+  end
+
+
+
 end
 
 # sam = Author.new("Sammy Cherono")

@@ -9,7 +9,6 @@ kevin = Author.new("Kevin Korir")
 allan = Author.new("Allan Aberi")
 phil = Author.new("Philip Mutisya")
 
-pp sam.articles
 
 # puts sam.name, kevin.name,allan.name, phil.name
 ##end
@@ -35,16 +34,32 @@ allan_favs = Article.new(allan, forbes, "Upcoming musicians")
 phil_riches = Article.new(phil, forbes, "Rich quickk")
 mooney_sam = Article.new(sam, forbes, "Chase a bag")
 broke_sam = Article.new(sam, forbes, "Broke Boys")
+sam_pays = Article.new(sam, forbes, "Get rich quickk")
 
-pp mwalimu_sam.author, mwalimu_sam.magazine
+# pp mwalimu_sam.author, mwalimu_sam.magazine
 
 # puts mwalimu_sam.title
 # pp Article.all
 ##end
 
-pp sam.articles
+# pp sam.articles
 
-pp sam.magazines
+# pp sam.magazines
 
-pp forbes.contributors
-pp architect.contributors
+# pp forbes.contributors
+# pp architect.contributors
+
+# pp "From Here: "
+
+# sam.add_article(forbes, "The bold and the rich")
+# pp forbes.article_titles, sam.topic_areas
+
+# pp "Now here"
+
+# pp Magazine.find_by_name("Forbes Magazine")
+
+# pp architect.article_titles
+
+pp "Naah for real"
+
+pp forbes.contributing_authors
