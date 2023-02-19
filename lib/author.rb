@@ -9,6 +9,30 @@ class Author
   def name
     @name
   end
+
+  #articles: Returns array of articles of this author instance
+  def articles
+    written_articles = []
+    Article.all.each do |article|
+      if article.author.name == self.name
+        written_articles << article
+      end
+    end
+
+    written_articles
+  end
+
+  #magazines: Returns array of magazines of this author instance
+  def magazines
+    featured_magazine = []
+    Article.all.each do |article|
+      if article.author.name == self.name
+        featured_magazine << article.magazine
+      end
+    end
+
+    featured_magazine.uniq
+  end
 end
 
 # sam = Author.new("Sammy Cherono")

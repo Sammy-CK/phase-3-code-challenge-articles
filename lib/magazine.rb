@@ -22,6 +22,18 @@ class Magazine
   def self.all
     @@all
   end
+
+  #contributors: Returns an array of Author instances who have written for this magazine
+  def contributors
+    contributors = []
+    Article.all.each do |article|
+      if article.magazine.name == self.name
+        contributors << article.author
+      end
+    end
+
+    contributors.uniq
+  end
 end
 
 # forbes = Magazine.new("Forbes Magazine", "Wealth")

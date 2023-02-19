@@ -19,7 +19,14 @@ class Article
     @@all
   end
 
+  #author: Returns the author of this article instance
   def author
+    @author
+  end
+
+  #magazine: Returns the magazine of this article instance
+  def magazine
+    @magazine
   end
 end
 
