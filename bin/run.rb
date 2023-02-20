@@ -48,7 +48,7 @@ sam_pays = Article.new(sam, forbes, "Get rich quickk")
 # sam.add_article(forbes, "The bold and the rich")
 # pp forbes.article_titles
 
-## pp sam.topic_areas
+# # pp sam.topic_areas
 
 # pp Magazine.find_by_name("Forbes Magazine")
 
