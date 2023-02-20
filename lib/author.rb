@@ -5,7 +5,7 @@ class Author
     @name = name
   end
 
-  #name: returns the name of the author instance
+  #name: Returns the name of the author instance
   def name
     @name
   end
@@ -34,22 +34,19 @@ class Author
     featured_magazine.uniq
   end
 
-
-
+  #add_article: creates new Article instance and associates it with that author and that magazine.
   def add_article(magazine, title)
     Article.new(self, magazine, title)
   end
 
+  #topic_areas: Returns a unique array of strings with the categories of the magazines the author has contributed to
   def topic_areas
     categories_featured = []
     (self.magazines).each do |magazine_contributed|
       categories_featured << magazine_contributed.category
     end
-      categories_featured.uniq
+    categories_featured.uniq
   end
-
-
-
 end
 
 # sam = Author.new("Sammy Cherono")

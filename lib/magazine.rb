@@ -35,6 +35,7 @@ class Magazine
     contributors.uniq
   end
 
+  # .find_by_name: Returns the first magazine object that matches arguement
   def self.find_by_name(name)
     found_magazine = @@all.find do |mag|
       mag.name == name
@@ -42,6 +43,7 @@ class Magazine
     found_magazine
   end
 
+  #article_titles: Returns an array string of the titles of all articles written for that magazine
   def article_titles
     featured_articles = []
     Article.all.each do |article|
@@ -53,33 +55,28 @@ class Magazine
     featured_articles
   end
 
+  #contributing_authors: Returns an array of authors who have written more than 2 articles for the magazine
   def contributing_authors
-   featured_articles =  Article.all.filter do |article|
-    # pp article
+    featured_articles = Article.all.filter do |article|
       article.magazine.name == self.name
     end
-# pp featured_articles
     authors = []
 
     featured_articles.each do |article_feat|
       authors << article_feat.author
     end
-    # pp authors
 
+    #find_duplicates: Helper method to find duplicates of authors > 2
     def find_duplicates(array)
       duplicates = []
       array.each do |element|
         duplicates << element if array.count(element) > 2
       end
       duplicates.uniq
-    end    
-    # pp authors
+    end
+
     find_duplicates(authors)
-
   end
-
-
-
 end
 
 # forbes = Magazine.new("Forbes Magazine", "Wealth")

@@ -2,18 +2,14 @@
 
 require_relative "../config/environment"
 
-##Author
 sam = Author.new("Sammy Cherono")
 kevin = Author.new("Kevin Korir")
 
 allan = Author.new("Allan Aberi")
 phil = Author.new("Philip Mutisya")
 
-
 # puts sam.name, kevin.name,allan.name, phil.name
-##end
 
-##Magazine
 forbes = Magazine.new("Forbes Magazine", "Wealth")
 architect = Magazine.new("Architect Digets", "Property")
 
@@ -24,9 +20,6 @@ architect = Magazine.new("Architect Digets", "Property")
 
 # pp Magazine.all
 
-##end
-
-##Article
 mwalimu_sam = Article.new(sam, architect, "Mwalimu Sam")
 kevins_conner = Article.new(kevin, architect, "Kevin Conner")
 
@@ -40,7 +33,10 @@ sam_pays = Article.new(sam, forbes, "Get rich quickk")
 
 # puts mwalimu_sam.title
 # pp Article.all
-##end
+
+# pp mwalimu_sam.author
+
+# pp  mwalimu_sam.magazine
 
 # pp sam.articles
 
@@ -49,17 +45,13 @@ sam_pays = Article.new(sam, forbes, "Get rich quickk")
 # pp forbes.contributors
 # pp architect.contributors
 
-# pp "From Here: "
-
 # sam.add_article(forbes, "The bold and the rich")
-# pp forbes.article_titles, sam.topic_areas
+# pp forbes.article_titles
 
-# pp "Now here"
+## pp sam.topic_areas
 
 # pp Magazine.find_by_name("Forbes Magazine")
 
 # pp architect.article_titles
 
-pp "Naah for real"
-
-pp forbes.contributing_authors
+# pp forbes.contributing_authors
